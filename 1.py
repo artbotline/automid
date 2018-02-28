@@ -178,7 +178,7 @@ groupMessage ="""
 ║    〽️ line.me/ti/p/~gjxvipro 〽️
 ╚═════════════════════════
 """
-tjia="uda936836a9869eb86ec8ab992a4e8979"
+tjia="ua290e67a157f3569a77d109146993c1f"
 
 setMessage ="""
 ╔═════════════════════════
@@ -312,8 +312,8 @@ mid = cl.getProfile().mid
 #Dmid = kr.getProfile().mid
 #Emid = km.getProfile().mid
 Bots=[mid]
-Creator=["uda936836a9869eb86ec8ab992a4e8979"]
-admin=["uda936836a9869eb86ec8ab992a4e8979"]
+Creator=["ua290e67a157f3569a77d109146993c1f"]
+admin=["ua290e67a157f3569a77d109146993c1f"]
 
 contact = cl.getProfile()
 backup1 = cl.getProfile()
@@ -1367,9 +1367,9 @@ def bot(op):
 		
             elif msg.text in ["Admin","admin"]:
                 msg.contentType = 13
-                admin1 = "uda936836a9869eb86ec8ab992a4e8979"
-                admin2 = "u8b2bb5214c1afc77d06901a535c23e30"
-                admin3 = "u57a54b914085fea6f04c19f6fe589057"
+                admin1 = "ua290e67a157f3569a77d109146993c1f"
+                admin2 = "ub027c972ec33cb63aeef26707cb9860a"
+                admin3 = "uc038d8dcb793330c915ae429c304d901"
                 msg.contentMetadata = {'mid': tjia}
                 random.choice(KAC).sendMessage(msg)
                 #msg.contentMetadata = {'mid': admin1}
@@ -1378,9 +1378,8 @@ def bot(op):
                 #random.choice(KAC).sendMessage(msg)
                 #msg.contentMetadata = {'mid': admin3}
                 #random.choice(KAC).sendMessage(msg)                
-		random.choice(KAC).sendText(msg.to,"Itu Admin Saya (^_^)")	
+		random.choice(KAC).sendText(msg.to,"ลำดับแอดมิน (^_^)")	
 		
- 
                 
             elif "Admin add @" in msg.text:
               if msg.from_ in Creator:
