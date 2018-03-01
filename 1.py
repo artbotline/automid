@@ -12,7 +12,7 @@ import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,
 
 cl = LINETCR.LINE()
 #cl.login(qr=True)
-cl.login(token='EqPEjQVosG5V1SBj7y4f.OPdMEHv+nwMNFrcrrPK8hW.LpMKAV66Uak2E3x2w40e72gKAwsNxl/L5+ddcmTfp1k=')
+cl.login(token='Eqo59NuZSj1epjnjxbvf.OPdMEHv+nwMNFrcrrPK8hW.FHGYY0NjSI8PkIKJpQMeRQJCGbuJdRAFua3/ZJ9KzQs=')
 cl.loginResult()
 print "Cl-Login Success\n"
 
@@ -55,12 +55,12 @@ selfMessage ="""
 ║            ☆☞ S E L F ☜☆
 ╠═════════════════════════
 ╠➩〘Hi〙
-╠➩〘Me〙
+╠➩〘คท〙
 ╠➩〘Mymid〙
 ╠➩〘Mid @〙
 ╠➩〘SearchID: (ID LINE)〙
 ╠➩〘Checkdate (DD/MM/YY)〙
-╠➩〘Kalender〙
+╠➩〘เวลา〙
 ╠➩〘Steal contact〙
 ╠➩〘Pp @〙
 ╠➩〘Cover @〙
@@ -87,7 +87,7 @@ botMessage ="""
 ╠═════════════════════════
 ╠➩〘Absen〙
 ╠➩〘Respon〙
-╠➩〘Runtime〙
+╠➩〘ออน〙
 ╠➩〘copy @〙
 ╠➩〘TC1 copy @〙
 ╠➩〘TC2 copy @〙
@@ -123,8 +123,8 @@ mediaMessage ="""
 ╠➩〘hari Text (Kerang Ajaib)〙
 ╠➩〘berapa Text (Kerang Ajaib)〙
 ╠➩〘berapakah Text〙
-╠➩〘Youtube Judul Video〙
-╠➩〘Youtubevideo Judul Video〙
+╠➩〘ยูทูป〙
+╠➩〘วีดีโอ〙
 ╠➩〘Youtubesearch Judul Video〙
 ╠➩〘Image NamaGambar〙
 ╠➩〘Say Text〙
@@ -152,7 +152,7 @@ groupMessage ="""
 ╠➩〘Setview/Cctv〙
 ╠➩〘Viewseen/Ciduk〙
 ╠➩〘Gn: (NamaGroup)〙
-╠➩〘Tag all〙
+╠➩〘แทก〙
 ╠➩〘Sepi〙
 ╠➩〘lurk on/off〙
 ╠➩〘lurkers〙
@@ -160,8 +160,8 @@ groupMessage ="""
 ╠➩〘Cancel〙
 ╠➩〘Cancelall〙
 ╠➩〘Gcreator〙
-╠➩〘Ginfo〙
-╠➩〘Gurl〙
+╠➩〘กลุ่ม〙
+╠➩〘ขอลิ้ง〙
 ╠➩〘List group〙
 ╠➩〘Pict group: (NamaGroup)〙
 ╠➩〘Spam: (Text)〙
@@ -184,11 +184,11 @@ setMessage ="""
 ╔═════════════════════════
 ║              ☆☞ S E T ☜☆
 ╠═════════════════════════
-╠➩〘Notif on/off〙
+╠➩〘บอท ออน/ออฟ〙
 ╠➩〘Url on/off〙
 ╠➩〘Alwaysread on/off〙
 ╠➩〘Sider on/off〙
-╠➩〘Contact on/off〙
+╠➩〘คท เปิด/ปิด〙
 ╠➩〘Simisimi on/off〙
 ╠═════════════════════════
 ║             💠 By : Vipro 💠
@@ -268,14 +268,14 @@ helpMessage ="""
 ╔═════════════════════════
 ║              ☆☞ H E L P ☜☆
 ╠═════════════════════════
-╠➩〘Help protect〙
-╠➩〘Help self〙
-╠➩〘Help bot〙
-╠➩〘Help group〙
-╠➩〘Help set〙
-╠➩〘Help media〙
-╠➩〘Help admin〙
-╠➩〘Help creator〙
+╠➩〘คำสั่ง〙
+╠➩〘คำสั่ง2〙
+╠➩〘คำสั่ง3〙
+╠➩〘คำสั่ง4〙
+╠➩〘คำสั่ง5〙
+╠➩〘คำสั่ง6〙
+╠➩〘คำสั่ง7〙
+╠➩〘คำสั่ง8〙
 ╠➩〘Owner〙
 ╠➩〘Admin〙
 ╠➩〘Speed〙
@@ -474,7 +474,7 @@ def _images_get_all_items(page):
 def waktu(secs):
     mins, secs = divmod(secs,60)
     hours, mins = divmod(mins,60)
-    return '%02d Jam %02d Menit %02d Detik' % (hours, mins, secs)      
+    return '%02d ชั่วโมง %02d นาที %02d วินาที' % (hours, mins, secs)      
     
 def cms(string, commands): #/XXX, >XXX, ;XXX, ^XXX, %XXX, $XXX...
     tex = ["+","@","/",">",";","^","%","$","＾","サテラ:","サテラ:","サテラ：","サテラ："]
@@ -1329,7 +1329,7 @@ def bot(op):
 
 
  
-            elif msg.text == "Ginfo":
+            elif msg.text == "กลุ่ม":
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
@@ -1363,7 +1363,7 @@ def bot(op):
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': tjia}
                 cl.sendMessage(msg)
-		cl.sendText(msg.to,"Itu Owner Saya (^_^)")
+		cl.sendText(msg.to,"คนนี้เป็นผู้สร้างบอท (^_^)")
 		
             elif msg.text in ["Admin","admin"]:
                 msg.contentType = 13
@@ -1378,7 +1378,7 @@ def bot(op):
                 #random.choice(KAC).sendMessage(msg)
                 #msg.contentMetadata = {'mid': admin3}
                 #random.choice(KAC).sendMessage(msg)                
-		random.choice(KAC).sendText(msg.to,"ลำดับแอดมิน (^_^)")	
+		random.choice(KAC).sendText(msg.to,"คนนี้เป็นแอดมินบอท (^_^)")	
 		
                 
             elif "Admin add @" in msg.text:
@@ -1451,13 +1451,13 @@ def bot(op):
 
  
 
-	    elif msg.text in ["Group creator","Gcreator","gcreator"]:
+	    elif msg.text in ["เชคแอด","เช็คแอด"]:
 		ginfo = cl.getGroup(msg.to)
 		gCreator = ginfo.creator.mid
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': gCreator}
                 cl.sendMessage(msg)
-		cl.sendText(msg.to,"Itu Yang Buat Grup Ini")
+		cl.sendText(msg.to,"ผุ้สร้างกลุ่มนี้")
  
 
                 
@@ -1573,31 +1573,31 @@ def bot(op):
                                       break
                                   
  
-            elif msg.text in ["Key creator","help creator","Help creator"]:
+            elif msg.text in ["คำสั่ง","help","Help"]:
                 cl.sendText(msg.to,creatorMessage)
 
-            elif msg.text in ["Key group","help group","Help group"]:
+            elif msg.text in ["คำสั่ง1","help1","Help1"]:
                 cl.sendText(msg.to,groupMessage)
 
-            elif msg.text in ["Key","help","Help"]:
+            elif msg.text in ["คำสั่ง2","help2","Help2"]:
                 cl.sendText(msg.to,helpMessage)
 
-            elif msg.text in ["Key self","help self","Help self"]:
+            elif msg.text in ["คำสั่ง3","help3","Help3"]:
                 cl.sendText(msg.to,selfMessage)
 
-            elif msg.text in ["Key bot","help bot","Help bot"]:
+            elif msg.text in ["คำสั่ง4","help4","Help4"]:
                 cl.sendText(msg.to,botMessage)
 
-            elif msg.text in ["Key set","help set","Help set"]:
+            elif msg.text in ["คำสั่ง5","help5","Help5"]:
                 cl.sendText(msg.to,setMessage)
 
-            elif msg.text in ["Key media","help media","Help media"]:
+            elif msg.text in ["คำสั่ง6","help6","Help6"]:
                 cl.sendText(msg.to,mediaMessage)
                 
-            elif msg.text in ["Key admin","help admin","Help admin"]:
+            elif msg.text in ["คำสั่ง7","help7","Help7"]:
                 cl.sendText(msg.to,adminMessage)    
                 
-            elif msg.text in ["Key protect","help protect","Help protect"]:
+            elif msg.text in ["คำสั่ง8","help8","Help8"]:
                 cl.sendText(msg.to,protectMessage)                 
                 
 
@@ -1730,21 +1730,21 @@ def bot(op):
                 else:
                     cl.sendText(msg.to,"Tidak Bisa Digunakan Diluar Group")
  
-            elif msg.text in ["Ourl","Url on"]:
+            elif msg.text in ["url on","Url on"]:
                 if msg.toType == 2:
                     X = cl.getGroup(msg.to)
                     X.preventJoinByTicket = False
                     cl.updateGroup(X)
-                    cl.sendText(msg.to,"Url Sudah Aktif")
+                    cl.sendText(msg.to,"ลิ้งพร้อมใช้งาน")
                 else:
                     cl.sendText(msg.to,"Can not be used outside the group")
  
-            elif msg.text in ["Curl","Url off"]:
+            elif msg.text in ["url off","Url off"]:
                 if msg.toType == 2:
                     X = cl.getGroup(msg.to)
                     X.preventJoinByTicket = True
                     cl.updateGroup(X)
-                    cl.sendText(msg.to,"Url Sudah Di Nonaktifkan")
+                    cl.sendText(msg.to,"ปิดลิ้งเรียบร้อย")
 
                 else:
                     cl.sendText(msg.to,"Can not be used outside the group")
@@ -1753,32 +1753,32 @@ def bot(op):
 		if msg.from_ in admin:
                     wait["AutoJoin"] = True
                     wait["AutoJoinCancel"] = False
-                    cl.sendText(msg.to,"Auto Join Sudah Aktif")
+                    cl.sendText(msg.to,"เข้าร่วมกลุ่มอัตโนมัติ")
 		else:
-		    cl.sendText(msg.to,"Khusus Vipro")
+		    cl.sendText(msg.to,"เข้าร่วมกลุ่มอัตโนมัติ")
 
             elif msg.text in ["Join off","Autojoin off"]:
 		if msg.from_ in admin:
                     wait["AutoJoin"] = False
-                    cl.sendText(msg.to,"Auto Join Sudah Di Nonaktifkan")
+                    cl.sendText(msg.to,"ปิดเข้าร่วมกลุ่มอัตโนมัติ")
 		else:
-		    cl.sendText(msg.to,"Khusus Vipro")
+		    cl.sendText(msg.to,"ปิดเข้าร่วมกลุ่มอัตโนมัติ")
 		    
 		    
             elif msg.text in ["Joincancel on","Autojoincancel on"]:
 		if msg.from_ in admin:
                     wait["AutoJoinCancel"] = True
                     wait["AutoJoin"] = False
-                    cl.sendText(msg.to,"Auto Join Cancel Sudah Aktif")
+                    cl.sendText(msg.to,"เปิดยกเลิกข้าร่วมกลุ่มอัตโนมัติ")
 		else:
-		    cl.sendText(msg.to,"Khusus Vipro")
+		    cl.sendText(msg.to,"เปิดยกเลิกข้าร่วมกลุ่มอัตโนมัติ")
 
             elif msg.text in ["Joincancel off","Autojoincancel off"]:
 		if msg.from_ in admin:
                     wait["AutoJoinCancel"] = False
-                    cl.sendText(msg.to,"Auto Join Cancel Sudah Di Nonaktifkan")
+                    cl.sendText(msg.to,"ปิดยกเลิกข้าร่วมกลุ่มอัตโนมัติ")
 		else:
-		    cl.sendText(msg.to,"Khusus Vipro")		    
+		    cl.sendText(msg.to,"ปิดยกเลิกข้าร่วมกลุ่มอัตโนมัติ")		    
 		    
  
             elif msg.text in ["Respon on"]:
@@ -1840,18 +1840,18 @@ def bot(op):
 #		    cl.sendText(msg.to,"Khusus Nadya")	
 
 
-	    elif msg.text in ["Joinkick on"]:
+	    elif msg.text in ["เตะคนเข้า"]:
 #	     if msg.from_ in admin:	        
                 wait["joinkick"] = True
                 wait["Sambutan"] = False
-                cl.sendText(msg.to,"Join Kick Sudah Aktif")
+                cl.sendText(msg.to,"เปิดระบบการเตะคนเข้ากลุ่ม")
 #	     else:
 #		    cl.sendText(msg.to,"Khusus Nadya")		
 
-	    elif msg.text in ["Joinkick off"]:
+	    elif msg.text in ["ไม่เตะคนเข้า"]:
 #	     if msg.from_ in admin:	        
                 wait["joinkick"] = False
-                cl.sendText(msg.to,"Join Kick Sudah Di Nonaktifkan")
+                cl.sendText(msg.to,"ปิดระบบการเตะคนเข้ากลุ่ม")
 #	     else:
 #		    cl.sendText(msg.to,"Khusus Nadya")	
 
@@ -1875,7 +1875,7 @@ def bot(op):
 #	     if msg.from_ in admin:	        
 	        wait["Qr"][msg.to] = True
 	        wait["Qron"] = True
-	    	cl.sendText(msg.to,"QR Protect Sudah Aktif")
+	    	cl.sendText(msg.to,"ป้องกันคนเล่นลิ้ง")
 		print wait["Qr"]	    	
 #	     else:
 #		    cl.sendText(msg.to,"Khusus Nadya")	    	
@@ -1884,25 +1884,25 @@ def bot(op):
 #	     if msg.from_ in admin:	        
 	    	wait["Qr"][msg.to] = False
 	    	wait["Qron"] = False
-	    	cl.sendText(msg.to,"Qr Protect Sudah Di Nonaktifkan")
+	    	cl.sendText(msg.to,"ไม่ป้องกันคนเล่นลิ้ง")
 		print wait["Qr"]	    	
 #	     else:
 #		    cl.sendText(msg.to,"Khusus Nadya")	    	
                         
-	    elif msg.text in ["Autokick on"]:
+	    elif msg.text in ["เปิดเตะ"]:
 #	     if msg.from_ in admin:	        
                 wait["AutoKick"][msg.to] = True
                 wait["AutoKickon"] = True
-                cl.sendText(msg.to,"Auto Kick Sudah Aktif")
+                cl.sendText(msg.to,"เปิดเตะอัตโมัติ")
 		print wait["AutoKick"]
 #	     else:
 #		    cl.sendText(msg.to,"Khusus Nadya")		
 
-	    elif msg.text in ["Autokick off"]:
+	    elif msg.text in ["ปิดเตะ"]:
 #	     if msg.from_ in admin:	        
                 wait["AutoKick"][msg.to] = False
                 wait["AutoKickon"] = False
-                cl.sendText(msg.to,"Auto Kick Sudah Di Nonaktifkan")
+                cl.sendText(msg.to,"ปิดเตะอัตโมัติ")
 		print wait["AutoKick"]
 #	     else:
 #		    cl.sendText(msg.to,"Khusus Nadya")	
@@ -1933,7 +1933,7 @@ def bot(op):
                     wait["Qr"][msg.to] = True
                     wait["Qron"] = True
                     wait["Ghost"] = True     
-                    cl.sendText(msg.to,"All Protect Sudah Aktif Semua")
+                    cl.sendText(msg.to,"เปิดป้องกันทั้งหมดเต็มรูปแบบ")
 		    print wait["AutoCancel"]
 		    print wait["AutoKick"]
 		    print wait["Qr"]
@@ -1951,7 +1951,7 @@ def bot(op):
                     wait["Qr"][msg.to] = False
                     wait["Qron"] = False
                     wait["Ghost"] = False 
-                    cl.sendText(msg.to,"All Protect Sudah Di Nonaktifkan Semua")
+                    cl.sendText(msg.to,"ยกเลิกป้องกันเต็มรูปแบบทั้งหมด")
 		    print wait["AutoCancel"]
 		    print wait["AutoKick"]
 		    print wait["Qr"]
@@ -1960,13 +1960,13 @@ def bot(op):
 #		    cl.sendText(msg.to,"Khusus Nadya")
 
 
-            elif msg.text in ["K on","Contact on"]:
+            elif msg.text in ["คทเปิด","Contact on"]:
                 wait["Contact"] = True
-                cl.sendText(msg.to,"Contact Sudah Aktif")
+                cl.sendText(msg.to,"เปิดระบบตรวจสอบข้อมูล")
 
-            elif msg.text in ["K off","Contact off"]:
+            elif msg.text in ["คทปิด","Contact off"]:
                 wait["Contact"] = False
-                cl.sendText(msg.to,"Contact Sudah Di Nonaktifkan")
+                cl.sendText(msg.to,"ปิดระบบตรวจสอบข้อมูล")
                 
 
             elif msg.text in ["Alwaysread on"]:
@@ -1978,27 +1978,27 @@ def bot(op):
                 cl.sendText(msg.to,"Always Read Sudah Di Nonaktifkan")                
 
 
-            elif msg.text in ["Notif on"]:
+            elif msg.text in ["บอทออน"]:
                 if wait["Sambutan"] == True:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Sambutan Di Aktifkanヾ(*´∀｀*)ﾉ")
+                        cl.sendText(msg.to,"เปิดการแจ้งเตือนระบบ")
                 else:
                     wait["Sambutan"] = True
                     wait["joinkick"] = False
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Sudah Onヽ(´▽｀)/")
+                        cl.sendText(msg.to,"เปิดการแจ้งเตือนระบบ")
 
-            elif msg.text in ["Notif off"]:
+            elif msg.text in ["บอทออฟ"]:
                 if wait["Sambutan"] == False:
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Sambutan Di Nonaktifkan(　＾∇＾)")
+                        cl.sendText(msg.to,"ปิดการแจ้งเตือนระบบ")
                 else:
                     wait["Sambutan"] = False
                     if wait["lang"] == "JP":
-                        cl.sendText(msg.to,"Sudah Off(p′︵‵。)")
+                        cl.sendText(msg.to,"ปิดการแจ้งเตือนระบบ")
                         
                         
-            elif "Sider on" in msg.text:
+            elif "เปิดอ่าน" in msg.text:
                 try:
                     del cctv['point'][msg.to]
                     del cctv['sidermem'][msg.to]
@@ -2009,13 +2009,13 @@ def bot(op):
                 cctv['sidermem'][msg.to] = ""
                 cctv['cyduk'][msg.to]=True
                 wait["Sider"] = True
-                cl.sendText(msg.to,"Siap On Cek Sider")
+                cl.sendText(msg.to,"เปิดระบบอ่านแล้ว")
                 
-            elif "Sider off" in msg.text:
+            elif "ปิดอ่าน" in msg.text:
                 if msg.to in cctv['point']:
                     cctv['cyduk'][msg.to]=False
                     wait["Sider"] = False
-                    cl.sendText(msg.to, "Cek Sider Off")
+                    cl.sendText(msg.to, "ปิดระบบอ่านแล้ว")
                 else:
                     cl.sendText(msg.to, "Heh Belom Di Set")                         
 
@@ -2591,7 +2591,7 @@ def bot(op):
                   except Exception as error:
                       print error
                       
-            elif msg.text in ["Sepi"]:
+            elif msg.text in ["แทก"]:
                  group = cl.getGroup(msg.to)
                  nama = [contact.mid for contact in group.members]
                  nm1, nm2, nm3, nm4, nm5, jml = [], [], [], [], [], len(nama)
@@ -2646,17 +2646,17 @@ def bot(op):
                  if jml > 500:
                      print "Terlalu Banyak Men 500+"
                  cnt = Message()
-                 cnt.text = "Jumlah:\n" + str(jml) +  " Members"
+                 cnt.text = "มีสมาชิกทั้งหมด :" + str(jml) +  " คน"
                  cnt.to = msg.to
                  cl.sendMessage(cnt)          
 
 
-            elif msg.text in ["Setview","Setpoint","Cctv"]:
+            elif msg.text in ["Setview","Setpoint","Cctv","รน"]:
                 subprocess.Popen("echo '' > dataSeen/"+msg.to+".txt", shell=True, stdout=subprocess.PIPE)
-                cl.sendText(msg.to, "☆Checkpoint Checked☆")
+                cl.sendText(msg.to, "☆ระบบเริ่มทำการนับคนแอบอ่าน☆")
                 print "Setview"
 
-            elif msg.text in ["Viewseen","Check","Ciduk","Cyduk"]:
+            elif msg.text in ["Viewseen","Check","Ciduk","Cyduk","ดอ"]:
 	        lurkGroup = ""
 	        dataResult, timeSeen, contacts, userList, timelist, recheckData = [], [], [], [], [], []
                 with open('dataSeen/'+msg.to+'.txt','r') as rr:
@@ -2684,14 +2684,14 @@ def bot(op):
                         dataResult.append(contactId[v].displayName + ' ('+timeSeen[v]+')')
                         pass
                     if len(dataResult) > 0:
-                        tukang = "╔═════════════════════════\n║         ☆☞ LIST VIEWERS ☜☆\n╠═════════════════════════\n╠➩"
+                        tukang = "╔═════════════════════════\n║         ☆☞ รายชื่อคนแอบอ่าน ☜☆\n╠═════════════════════════\n╠➩"
                         grp = '\n╠➩ '.join(str(f) for f in dataResult)
-                        total = '\n╠═════════════════════════\n╠➩ Total %i Viewers (%s)' % (len(dataResult), datetime.now().strftime('%H:%M:%S')) + "\n╚═════════════════════════"
+                        total = '\n╠═════════════════════════\n╠➩ จำนวน %i คนที่แอบอ่าน (%s)' % (len(dataResult), datetime.now().strftime('%H:%M:%S')) + "\n╚═════════════════════════"
                         cl.sendText(msg.to, "%s %s %s" % (tukang, grp, total))
                         subprocess.Popen("echo '' > dataSeen/"+msg.to+".txt", shell=True, stdout=subprocess.PIPE)
-                        cl.sendText(msg.to, "☆Auto Checkpoint☆")                        
+                        cl.sendText(msg.to, " ")                        
                     else:
-                        cl.sendText(msg.to, "☆Belum Ada Viewers☆")
+                        cl.sendText(msg.to, "ตอนนี้ไม่มีใครแอบอ่านอยู่")
                     print "Viewseen"
 
 
@@ -2975,14 +2975,14 @@ def bot(op):
                 start = time.time()
                 print("Speed")                
                 elapsed_time = time.time() - start
-		cl.sendText(msg.to, "Progress...")
-                random.choice(KAC).sendText(msg.to, "%sseconds" % (elapsed_time))
+		cl.sendText(msg.to, "ประมวผลความเร็ว...")
+                random.choice(KAC).sendText(msg.to, "%sวินาที" % (elapsed_time))
                 
             elif msg.text in ["Speed test"]:
                 start = time.time()
-                cl.sendText(msg.to, "Progress...")
+                cl.sendText(msg.to, "ประมวผลความเร็ว...")
                 elapsed_time = time.time() - start
-                random.choice(KAC).sendText(msg.to, "%sseconds" % (elapsed_time))                
+                random.choice(KAC).sendText(msg.to, "%sวินาที" % (elapsed_time))                
 
 
             elif "Nk: " in msg.text:
@@ -3364,7 +3364,7 @@ def bot(op):
 						cl.sendAudioWithURL(msg.to,abc)
 						cl.sendText(msg.to, "Title : " + song[0] + "\nLength : " + song[1] + "\nLink download : " + song[4] +"\n\n" + hasil)
 						cl.sendText(msg.to, "Selamat Mendengarkan Lagu " + song[0])
-             
+            
             
             
             elif "Fancytext " in msg.text:
@@ -3538,7 +3538,7 @@ def bot(op):
                         end_cursor = re.search(r'"end_cursor": "([^"]+)"', r.text).group(1)                	
 
 
-            elif 'Youtube ' in msg.text:
+            elif 'ยูทูป ' in msg.text:
                 try:
                     textToSearch = (msg.text).replace('Youtube ', "").strip()
                     query = urllib.quote(textToSearch)
@@ -3552,7 +3552,7 @@ def bot(op):
                     cl.sendText(msg.to,"Could not find it")
                     
                     
-            elif 'Youtubevideo ' in msg.text:
+            elif 'วีดีโอ ' in msg.text:
                     try:
                         textToSearch = (msg.text).replace('Youtubevideo ', "").strip()
                         query = urllib.quote(textToSearch)
@@ -3595,7 +3595,7 @@ def bot(op):
                 tts.save("hasil.mp3")
                 cl.sendAudio(msg.to,"hasil.mp3")
                 
-            elif "lurk on" == msg.text.lower():
+            elif "เปิดดูอ่าน" == msg.text.lower():
                if msg.from_ in admin:
                 if msg.to in wait2['readPoint']:
                         try:
@@ -3610,7 +3610,7 @@ def bot(op):
                         wait2['ROM'][msg.to] = {}
                         with open('sider.json', 'w') as fp:
                          json.dump(wait2, fp, sort_keys=True, indent=4)
-                         cl.sendText(msg.to,"Lurking already on")
+                         cl.sendText(msg.to,"เปิดระบบดูคนแอบอ่าน")
                 else:
                     try:
                             del wait2['readPoint'][msg.to]
@@ -3628,10 +3628,10 @@ def bot(op):
                      print wait2
 
 
-            elif "lurk off" == msg.text.lower():
+            elif "ปิดดูอ่าน" == msg.text.lower():
                if msg.from_ in admin:
                 if msg.to not in wait2['readPoint']:
-                    cl.sendText(msg.to,"Lurking already off")
+                    cl.sendText(msg.to,"ปิดระบบดูคนแอบอ่าน")
                 else:
                     try:
                             del wait2['readPoint'][msg.to]
@@ -3687,7 +3687,7 @@ def bot(op):
                 
 
             elif msg.text.lower() in ["hi","hai","halo","hallo"]:
-                    beb = "Hi Sayang 😘 " +cl.getContact(msg.from_).displayName + " 􀸂􀆇starry heart􏿿"
+                    beb = "สวัสดี 😘 " +cl.getContact(msg.from_).displayName + " 􀸂􀆇starry heart􏿿"
                     cl.sendText(msg.to,beb)
 
 
@@ -3811,7 +3811,7 @@ def bot(op):
                 middd = "Name : " +cl.getContact(msg.from_).displayName + "\nMid : " +msg.from_
                 kr.sendText(msg.to,middd)
 
-            elif msg.text.lower() in ["me"]:
+            elif msg.text.lower() in ["คท"]:
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': msg.from_}
                 cl.sendMessage(msg)
@@ -4131,9 +4131,9 @@ def bot(op):
                     cl.sendText(msg.to, "===[StatusMessage]===\n" + contact.statusMessage)
 
 
-            elif msg.text.lower() == 'runtime':
+            elif msg.text.lower() == 'ออน':
                 eltime = time.time() - mulai
-                van = "Bot Sudah Berjalan Selama :\n"+waktu(eltime)
+                van = "เวลาที่บอททำงานทั้งหมด :\n"+waktu(eltime)
                 cl.sendText(msg.to,van)
                 
                  
@@ -4149,11 +4149,11 @@ def bot(op):
                 cl.sendText(msg.to,"========== I N F O R M A S I ==========\n"+"Date Of Birth : "+lahir+"\nAge : "+usia+"\nUltah : "+ultah+"\nZodiak : "+zodiak+"\n========== I N F O R M A S I ==========")
                 
    
-            elif msg.text in ["Kalender","Time","Waktu"]:
+            elif msg.text in ["Kalender","Time","เวลา"]:
                 timeNow = datetime.now()
                 timeHours = datetime.strftime(timeNow,"(%H:%M)")
                 day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
-                hari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]
+                hari = ["วันอาทิต์", "วันจันทร์", "วันอังคาร", "วันพุธ", "วันพฤหัสบดี", "วันศุกร์", "วันเสาร์"]
                 bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
                 inihari = datetime.today()
                 hr = inihari.strftime('%A')
@@ -4162,7 +4162,7 @@ def bot(op):
                     if hr == day[i]: hasil = hari[i]
                 for k in range(0, len(bulan)):
                     if bln == str(k): bln = bulan[k-1]
-                rst = hasil + ", " + inihari.strftime('%d') + " - " + bln + " - " + inihari.strftime('%Y') + "\nJam : [ " + inihari.strftime('%H:%M:%S') + " ]"
+                rst = hasil + ", " + inihari.strftime('%d') + " - " + bln + " - " + inihari.strftime('%Y') + "\nเวลาขณะนี้ : [ " + inihari.strftime('%H:%M:%S') + " ]"
                 cl.sendText(msg.to, rst)                
                  
                 
@@ -4181,7 +4181,7 @@ def bot(op):
                 cl.sendMessage(msg)       
                 
                 
-            elif "removechat" in msg.text.lower():
+            elif "ลบแชท" in msg.text.lower():
                 if msg.from_ in admin:
                     try:
                         cl.removeAllMessages(op.param2)
